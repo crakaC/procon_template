@@ -7,7 +7,8 @@ dependencies {
 }
 
 sourceSets {
-	main.kotlin.srcDirs += 'src/'
+	main.java.srcDirs = []
+	main.kotlin.srcDirs = ['src/']
 }
 
 repositories {
