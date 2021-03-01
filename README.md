@@ -3,11 +3,10 @@
 - make
 
 # Usage
-- Set path to Kotlin Library in makefile
-- Write Kotlin code in src directory
-- prepare `gradle prepare`
-- compile `gradle compileKotolin` or `gradle cK`
-- run `make [file_name_without.kt]`
+- Run `gradle prepare` first
+- Write Kotlin codes in src directory
+- Compile `gradle compileKotolin` or `gradle cK`
+- Run `make [file_name_without.kt]`
 
 ## example
 ```
