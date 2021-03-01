@@ -26,5 +26,4 @@ You can run main() at 1.kt by
 
 # TODO
 - [x] Remove dependency of Kotlin (Use gradle only)
-- [ ] Compile only target file
 - [ ] Check testcase automatically
