@@ -13,3 +13,13 @@ sourceSets {
 repositories {
 	mavenCentral()
 }
+
+task prepare {
+	doLast{
+		def paths = []
+		sourceSets.main.runtimeClasspath.each {
+			paths <<= it.toString()
+		}
+		file("classpath").text = String.join(":", paths)
+	}
+}

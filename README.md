@@ -1,12 +1,12 @@
 # Requirements
 - Gradle
-- Kotlin
 - make
 
 # Usage
 - Set path to Kotlin Library in makefile
 - Write Kotlin code in src directory
-- compile `gradle compileKotolin`
+- prepare `gradle prepare`
+- compile `gradle compileKotolin` or `gradle cK`
 - run `make [file_name_without.kt]`
 
 ## example
@@ -25,6 +25,6 @@ You can run main() at 1.kt by
 `make 1`
 
 # TODO
-- Remove dependency of Kotlin (Use gradle only)
-- Compile only target file
-- Check testcase automatically
+- [x] Remove dependency of Kotlin (Use gradle only)
+- [ ] Compile only target file
+- [ ] Check testcase automatically
