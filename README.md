@@ -6,7 +6,7 @@
 - Run `gradle prepare` first
 - Write Kotlin codes in src directory
 - Compile `gradle compileKotolin` or `gradle cK`
-- Run `make [file_name_without.kt]`
+- Run `make [file_name](without extension)`
 
 ## example
 ```
