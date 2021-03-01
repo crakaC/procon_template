@@ -1,8 +1,6 @@
 CLASS_PATH=$(shell cat classpath)
-KtClass=$(shell ruby -e 'if Integer("$@"[0], exception: false).nil?; puts "$@".capitalize + "Kt"; else puts "_$@Kt"; end')
-#KtClass=$(shell ./getKtName $@)
+KtClass=$(shell echo $@ | awk '{print toupper(substr($$0, 0, 1)) substr($$0, 2) "Kt"}' | sed -E 's/^([0-9])/_\1/')
 %: src/%.kt
-# 	gradle run -PmainClass=$@
 	java -classpath $(CLASS_PATH) $(KtClass)
 
 .PHONY: clean
