@@ -1,11 +1,11 @@
 # Requirements
-- Gradle
+- Java
 - make
 
 # Usage
-- Run `gradle prepare` first
+- Run `./gradlew prepare` first
 - Write Kotlin codes in src directory
-- Compile `gradle compileKotolin` or `gradle cK`
+- Compile `./gradlew compileKotolin` or `./gradlew cK`
 - Run `make [file_name](without extension)`
 
 ## example
