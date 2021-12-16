@@ -5,4 +5,4 @@ KtClass=$(shell echo $@ | awk '{print toupper(substr($$0, 0, 1)) substr($$0, 2) 
 
 .PHONY: clean
 clean:
-	gradle clean
+	./gradlew clean
