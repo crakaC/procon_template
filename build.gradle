@@ -6,10 +6,7 @@ dependencies {
 	implementation 'org.jetbrains.kotlin:kotlin-stdlib'
 }
 
-sourceSets {
-	main.java.srcDirs = []
-	main.kotlin.srcDirs = ['src/']
-}
+sourceSets.main.kotlin.srcDirs = ['src/']
 
 repositories {
 	mavenCentral()
