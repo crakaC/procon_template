@@ -1,8 +1,9 @@
 fun main(){
+
 }
 
 private val br = System.`in`.bufferedReader()
-private fun readLine() = br.readLine()!!
+private fun readLine() = br.readLine()
 private fun readInt() = readLine().toInt()
 private fun readInts() = readLine().split(" ").map(String::toInt)
 private fun readLong() = readLine().toLong()
