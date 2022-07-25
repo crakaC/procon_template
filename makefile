@@ -3,6 +3,10 @@ KtClass=$(shell echo $@ | awk '{print toupper(substr($$0, 0, 1)) substr($$0, 2) 
 %: src/%.kt
 	java -classpath $(CLASS_PATH) $(KtClass)
 
+.PHONY: build
+build:
+	./gradlew build
+
 .PHONY: clean
 clean:
 	./gradlew clean
