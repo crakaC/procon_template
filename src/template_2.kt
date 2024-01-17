@@ -25,11 +25,13 @@ private fun _hasNextByte() = if (_ptr < _buflen) true else {
     _buflen = _in.read(_buf)
     _buflen > 0
 }
-private fun readChar() = if (_hasNextByte()) _buf[_ptr++].toChar() else _EOF
+
+private fun readChar() = if (_hasNextByte()) _buf[_ptr++].toInt().toChar() else _EOF
 private fun _skip() {
     while (_hasNextByte() && !_buf[_ptr]._isPrintable()) _ptr++
     if (!_hasNextByte()) error("reached to EOF")
 }
+
 private fun readLine() = buildString {
     _skip()
     var c = readChar()
@@ -38,6 +40,7 @@ private fun readLine() = buildString {
         c = readChar()
     }
 }
+
 private fun readString() = buildString {
     _skip()
     var c = readChar()
@@ -46,6 +49,7 @@ private fun readString() = buildString {
         c = readChar()
     }
 }
+
 private fun readLong(): Long {
     _skip()
     var n = 0L
@@ -63,10 +67,12 @@ private fun readLong(): Long {
     }
     return if (neg) -n else n
 }
+
 private fun readInt() = readLong().let {
     if (it in Int.MIN_VALUE..Int.MAX_VALUE) it.toInt()
     else throw NumberFormatException("$it is out of Int range")
 }
+
 private fun readDouble(): Double {
     _skip()
     var n = 0.0
