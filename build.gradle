@@ -11,13 +11,15 @@ sourceSets.main.kotlin.srcDirs = ['src/']
 repositories {
     mavenCentral()
 }
-
 tasks.register('prepare') {
     doLast {
         def paths = []
         sourceSets.main.runtimeClasspath.each {
             paths <<= it.toString()
         }
-        file("classpath").text = String.join(":", paths)
+        def out = file(".classpath")
+        out.text = String.join(":", paths)
+        println(".classpath is generated!")
+        println(out.text)
     }
 }
