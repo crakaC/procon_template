@@ -1,26 +1,21 @@
 plugins {
-	id 'org.jetbrains.kotlin.jvm' version "1.3.71"
-}
-
-dependencies {
-	implementation 'org.jetbrains.kotlin:kotlin-stdlib'
+    id 'org.jetbrains.kotlin.jvm' version "1.8.20"
 }
 
 sourceSets {
-	main.java.srcDirs = []
-	main.kotlin.srcDirs = ['src/']
+    main.java.srcDir("src")
 }
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
-task prepare {
-	doLast{
-		def paths = []
-		sourceSets.main.runtimeClasspath.each {
-			paths <<= it.toString()
-		}
-		file("classpath").text = String.join(":", paths)
-	}
+tasks.register("prepare") {
+    doLast {
+        def paths = []
+        sourceSets.main.runtimeClasspath.each {
+            paths <<= it.toString()
+        }
+        file("classpath").text = String.join(":", paths)
+    }
 }
