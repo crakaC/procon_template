@@ -1,5 +1,6 @@
 fun main() {
-
+    val name = readLine()
+    println("Hello, $name")
 }
 
 private val br = System.`in`.bufferedReader()
