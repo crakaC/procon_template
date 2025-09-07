@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.2.10"
+    kotlin("jvm") version "1.7.10"
 }
 
 repositories {
@@ -7,7 +7,7 @@ repositories {
 }
 
 sourceSets.main {
-    kotlin.srcDir("src")
+    java.srcDir("src")
 }
 
 tasks.register("prepare") {
